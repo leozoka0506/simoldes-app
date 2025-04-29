@@ -3,7 +3,7 @@ import GraficoPizza from "./components/GraficoPizza";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <h1>Dashboard Simoldes</h1>
       <GraficoPizza />
     </div>
