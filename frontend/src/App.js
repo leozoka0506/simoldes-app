@@ -14,11 +14,13 @@ function App() {
         <label>Data: </label>
         <input
           type="date"
+          className="input-data"
           value={dataSelecionada}
           onChange={(e) => setDataSelecionada(e.target.value)}
         />
         <label style={{ marginLeft: "20px" }}>Turno: </label>
         <select
+          className="select-turno"
           value={turnoSelecionado}
           onChange={(e) => setTurnoSelecionado(e.target.value)}
         >
@@ -28,9 +30,10 @@ function App() {
           <option value="3">Turno 3</option>
         </select>
       </form>
-
-      <GraficoPizza dataSelecionada={dataSelecionada} turnoSelecionado={turnoSelecionado} />
-      <GraficoBarras dataSelecionada={dataSelecionada} turnoSelecionado={turnoSelecionado} />
+      <div className="graficos">
+        <GraficoPizza dataSelecionada={dataSelecionada} turnoSelecionado={turnoSelecionado} />
+        <GraficoBarras dataSelecionada={dataSelecionada} turnoSelecionado={turnoSelecionado} />
+      </div>
     </div>
   );
 }
